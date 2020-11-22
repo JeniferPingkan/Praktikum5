@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VALIDATION</title>
+    <style>
+        body{ 
+            background-color:teal;
+        } 
+	</style>	
+</head>
+<body style="margin: 200px;">
+    <div id="header" style="text-align: center; background-color:darksalmon ; color:green">
+		<h2> Tiket Online </h2> 
+		</div>
+	<div id="VALIDATION"></div>
+    <center>
+            <form method="RequeST"> 
+
+                Nama :<br>
+                <input type="text" required="" maxlength="35" placeholder="Nama" id="nama" name="nama"></br>
+                Email :<br>
+                <input type="email" required="" placeholder="Email" id="email" name="email"></br>
+                Jam Keberangkatan :<br>
+                <input type="time" required="" placeholder="Jam Keberangkatan" id="jam" name="jam"></br>
+                Jumlah Tiket :<br>
+                <input type="number" required="" max="10" placeholder="Jumlah Tiket" id="tiket" name="tiket"></br>
+                <button type="submit" onclick="return login()">SUBMIT</button>
+            </form>
+    </center>
+</body>
+<script>
+    function login() {
+        nama = document.getElementById("nama").value;
+		email = document.getElementById("email").value;
+
+        if (nama == "" || email == "") {
+			alert("Nama / Email tidak boleh kosong");
+			return false;
+        }
+    }
+</script>
+</html>
